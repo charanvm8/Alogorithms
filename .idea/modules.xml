@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Alogorithms.iml" filepath="$PROJECT_DIR$/.idea/Alogorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Abdul/src/Abdul.iml" filepath="$PROJECT_DIR$/Abdul/src/Abdul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algos/Algos.iml" filepath="$PROJECT_DIR$/Algos/Algos.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Alogorithms.iml" filepath="$PROJECT_DIR$/.idea/Alogorithms.iml" />
     </modules>
   </component>
