@@ -28,7 +28,7 @@ public class MergeSortRecursive {
         for(int k=0;k<=sArrLen;k++)
             sArr[k] = arr[mid+1+k];
 
-        while()
+        //while()
     }
 
     public static void main(String[] args) {
