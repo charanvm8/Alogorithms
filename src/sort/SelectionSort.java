@@ -5,19 +5,15 @@ public class SelectionSort {
     public static void selectionSort(int[] arr){
         int arrLen = arr.length;
         for(int i=0;i<arrLen-1;i++){
-            int key = arr[i];
             int index = i;
             for(int j=i+1;j<arrLen;j++){
-                if(key>arr[j]){
-                    key = arr[j];
+                if(arr[index]>arr[j]){
                     index = j;
                 }
             }
-            if(i!=index){
-               int temp = arr[index];
-               arr[index] = arr[i];
-               arr[i] = temp;
-            }
+            int temp = arr[index];
+            arr[index] = arr[i];
+            arr[i] = temp;
         }
     }
     static void printArray(int arr[])
