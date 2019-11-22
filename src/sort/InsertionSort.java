@@ -3,16 +3,7 @@ package sort;
 public class InsertionSort {
 
     public static void insertionSort(int[] arr){
-        int arrlen = arr.length;
-        for(int i=1;i<arrlen;i++){
-            int pres = arr[i];
-            int counter = i-1;
-            while(counter>-1 && pres<arr[counter]){
-                arr[counter+1]=arr[counter];
-                counter--;
-            }
-            arr[counter+1] = pres;
-        }
+
     }
 
     static void printArray(int arr[], int size)
@@ -28,5 +19,9 @@ public class InsertionSort {
         insertionSort(arr);
 
         printArray(arr,arr.length);
+
+        String s = "Chaan";
+        String q = "HarshaCharanDileep";
+        System.out.println(q.indexOf(s)== -1);
     }
 }

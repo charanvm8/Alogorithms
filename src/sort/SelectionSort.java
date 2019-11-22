@@ -3,10 +3,10 @@ package sort;
 public class SelectionSort {
 
     public static void selectionSort(int[] arr){
-        int arrLen = arr.length;
-        for(int i=0;i<arrLen-1;i++){
+        int len = arr.length;
+        for(int i=0;i<len-1;i++){
             int index = i;
-            for(int j=i+1;j<arrLen;j++){
+            for(int j=i+1;j<len;j++){
                 if(arr[index]>arr[j]){
                     index = j;
                 }
