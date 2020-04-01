@@ -39,9 +39,28 @@ public class MinNoOfCoinsChange {
         }
     }
 
+    public static int minNumberOfCoinsForChange(int n, int[] denoms) {
+
+        int[] res = new int[n+1];
+        for(int k=1;k<res.length;k++){
+            res[k] = Integer.MAX_VALUE;
+        }
+        for(int i=0;i<denoms.length;i++){
+            for(int j=1;j<=n;j++){
+                if(j==denoms[i]){
+                    res[j] = 1;
+                }
+                else if(j>=denoms[i] && res[j-denoms[i]]!=Integer.MAX_VALUE && res[denoms[i]]!=Integer.MAX_VALUE){
+                    res[j]=Math.min(res[j-denoms[i]]+res[denoms[i]],res[j]);
+                }
+            }
+        }
+        return res[n]==Integer.MAX_VALUE?-1:res[n];
+    }
+
     public static void main(String[] args) {
-        int[] inputArr =  {3,5};
-        int z = memMinCoins(9,inputArr.length,inputArr);
+        int[] inputArr =  {2,1};
+        int z = minNumberOfCoinsForChange(3,inputArr);
         System.out.println(z);
     }
 }
