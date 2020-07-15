@@ -1,5 +1,7 @@
 package geeksForGeeks.recursion;
 
+import java.util.ArrayList;
+
 public class RecursionMain {
 
     public static void main(String[] args) {
@@ -15,10 +17,16 @@ public class RecursionMain {
 //        CutRope cutRope = new CutRope();
 //        System.out.println(cutRope.cutRope(23,11,9,12));
         //PrintSubSets.printSubSets("ABC");
-        //System.out.println(InterwaevingString.interweavingStrings("algoexpert","your-dream-job","your-algodream-expertjob"));
+        System.out.println(InterwaevingString.interweavingStrings("algoexpert","your-dream-job","your-algodream-expertjob"));
         //TowerOfHanoi.towerOfHanoi(3,'A','B','C');
         //System.out.println(Josephus.josephus(5,3));
-        int[] arr = {10,20,15};
-        System.out.println(SubsetsSumCount.countSubSetsSum(arr,arr.length,37));
+//        int[] arr = {10,20,15};
+//        System.out.println(SubsetsSumCount.countSubSetsSum(arr,arr.length,37));
+
+//        ArrayList<String> res = LexSort.powerSet("abc");
+//        for(String s:res){
+//            System.out.print(s+"-");
+//        }
+
     }
 }
