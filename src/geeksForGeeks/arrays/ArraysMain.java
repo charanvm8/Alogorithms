@@ -45,6 +45,6 @@ public class ArraysMain {
 //        System.out.println(MaximumDiff.maxDiff(arr7));
 
         int[] arr11 = {1,5,3,8,12};
-        System.out.println(BuySellStock1.buySellStock1(arr11,0,arr11.length-1));
+        System.out.println(BuySellStock1.buySellStock2(arr11,0,arr11.length-1));
     }
 }
