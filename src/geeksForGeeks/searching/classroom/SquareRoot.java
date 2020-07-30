@@ -13,7 +13,24 @@ public class SquareRoot {
     }
 
     // Optimized Solution
-//    public static int getSquareRoot(int i){
-//
-//    }
+    public static int getSquareRoot(int num){
+        int start = 1;
+        int end = num;
+        int res = -1;
+        while (start<end){
+            int mid = start+(end-start)/2;
+            int square = mid*mid;
+            if(square==num){
+                return mid;
+            }
+            if(square>num){
+                end= mid;
+            }
+            else{
+                start = mid+1;
+                res = mid;
+            }
+        }
+        return res;
+    }
 }
