@@ -21,14 +21,18 @@ public class TheoryMain {
 //
 //        System.out.println(Collections.binarySearch(ints,30,Collections.reverseOrder()));
 
-//        int[] arr1 = {2,3,4,1,6,4};
-//        MissingRepeatingNumber.missingRepeatingNumber(arr1);
+//        int[] arr1 = {2,2,3,1,6,4};
+//        MissingRepeatingNumber.missingNumberMath(arr1);
 //
 //        int[] arr3 = {1,1,2,2,2,2,2,3};
 //        System.out.println(CountOccurances.countOccurrances(arr3,1));
 
-            int[] arr = {1,2};
-        System.out.println(arr[0]);
+//            int[] arr = {1,2};
+//        System.out.println(arr[0]);
+//        System.out.println(3>arr1[-1]);
+        int[] arr4 = {0,0,0,0,0,0,1,1,1,1};
+        System.out.println(CountOccurances.getOneOccurrence(arr4,0, arr4.length));
+
     }
 }
 

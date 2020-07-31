@@ -14,7 +14,7 @@ public class LexSort {
 //    static void getPowerSet(String s,int index,String pres,ArrayList<String> result){
 //        if(s.length()==0){
 //            result.add(pres);
-//            System.out.println("Test"+pres);
+//            System.out.println(pres);
 //            return;
 //        }
 //        getPowerSet(s.substring(0,index),index-1,pres+s.charAt(index),result);
