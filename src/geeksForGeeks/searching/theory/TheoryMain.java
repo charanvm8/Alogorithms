@@ -30,8 +30,15 @@ public class TheoryMain {
 //            int[] arr = {1,2};
 //        System.out.println(arr[0]);
 //        System.out.println(3>arr1[-1]);
-        int[] arr4 = {0,0,0,0,0,0,1,1,1,1};
-        System.out.println(CountOccurances.getOneOccurrence(arr4,0, arr4.length));
+//        int[] arr4 = {1,2,11, 21, 24, 29, 36, 49, 52, 52, 53, 55, 61, 66, 70, 72, 75, 75, 79, 83, 86, 92, 92, 93, 95, 96, 97};
+//        System.out.println(CountOccurances.getFirstOccurance(arr4,0,arr4.length,2));
+//        int[] arr5 = {10, 20};
+//        PeakElements.peekElements(arr5,0,arr5.length-1);
+        int[] arr5 = {0,0,0,4};
+        MoveZerosToEnd.moveZerosToEnd(arr5);
+        for(int z:arr5){
+            System.out.print(z+" ");
+        }
 
     }
 }

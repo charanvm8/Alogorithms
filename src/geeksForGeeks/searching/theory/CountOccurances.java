@@ -13,7 +13,10 @@ public class CountOccurances {
     public static int getFirstOccurance(int[] arr, int start,int end,int target){
         if(start<=end){
             int mid = start+((end-start)/2);
-            if(mid==0 || (arr[mid-1]<target && arr[mid]==target)){
+            if(mid==0 && arr[mid]!=target){
+                return -1;
+            }
+            else if (arr[mid-1]<target && arr[mid]==target){
                 return mid;
             }
             else if(arr[mid]>=target){
@@ -57,6 +60,31 @@ public class CountOccurances {
             }
             else{
                 start = mid+1;
+            }
+        }
+        return firstOcc;
+    }
+
+    public static int countOnes(int arr[], int N){
+        int getFinalPosition = getOneEndOccurance(arr,0,arr.length);
+        return getFinalPosition+1;
+    }
+
+    // End Occurrence
+    public static int getOneEndOccurance(int[] arr,int start,int end){
+        int firstOcc = -1;
+        int size = arr.length;
+        while(start<=end){
+            int mid = start+((end-start))/2;
+            if(mid==size-1 || (arr[mid]==1 && arr[mid+1]==0)){
+                firstOcc = mid;
+                break;
+            }
+            else if(arr[mid] == 1){
+                start = mid+1;
+            }
+            else{
+                end = mid-1;
             }
         }
         return firstOcc;
