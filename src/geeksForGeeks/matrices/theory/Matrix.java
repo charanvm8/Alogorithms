@@ -39,15 +39,14 @@ public class Matrix {
         return res;
     }
 
-    public static void transpose(int[][] arr){
-        for(int i=0;i<arr.length;i++){
-            for(int j=i;j<arr[0].length;j++){
-                int temp = arr[i][j];
-                arr[i][j] = arr[j][i];
-                arr[j][i] = temp;
-            }
-        }
-    }
-
+//    public static void transpose(int[][] arr){
+//        for(int i=0;i<arr.length;i++){
+//            for(int j=i;j<arr[0].length;j++){
+//                int temp = arr[i][j];
+//                arr[i][j] = arr[j][i];
+//                arr[j][i] = temp;
+//            }
+//        }
+//    }
 
 }
