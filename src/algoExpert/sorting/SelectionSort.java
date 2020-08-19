@@ -14,7 +14,6 @@ public class SelectionSort {
                 array[i] = array[temp];
                 array[temp] = val;
             }
-
         }
         return array;
     }
