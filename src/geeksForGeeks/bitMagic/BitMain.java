@@ -1,27 +1,24 @@
 package geeksForGeeks.bitMagic;
 
+import java.util.*;
+
 public class BitMain {
 
     public static void main(String[] args) {
-        //Introduction
 
-        int x = 33;
-        int y = 6;
+        System.out.println(CountSetBits.countSetBits1(13));
+        Map<Integer,Integer> map = new HashMap();
+        map.put(1,1);
+        Iterator<Integer> itr = map.keySet().iterator();
+        while (itr.hasNext()){
+            System.out.println(itr.hasNext());
+            if(map.get(itr.hasNext())==1){
+                System.out.println("Here");
+            }
+            itr.next();
+        }
 
-        System.out.println(~x);
-
-        System.out.println(Math.pow(2,3));
-        System.out.println(Math.sqrt(16));
-        //System.out.println(Math.pow(3,2)-4ac);
-
-        // (-b+(Math.sqrt(Math.pow(b,2)-(4*a*c))))/(2.0*a);
-
-        // Math.pow(4,2);
-        System.out.println(4*2*3);
-
-        float q = (float)Math.pow(3,5);
-
-        System.out.println(Math.log10(120));
+        Set<Integer> set = new HashSet<>();
 
     }
 }

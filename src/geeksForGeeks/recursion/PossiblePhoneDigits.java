@@ -1,42 +1,38 @@
 package geeksForGeeks.recursion;
 
+import java.util.ArrayList;
+
 public class PossiblePhoneDigits {
 
-    public static char[] test(int x){
-        char[] result;
-        switch(x){
-            case 2:
-                result = new char[]{'A','B','C'};
-                return result;
-            case 3:
-                result = new char[]{'A','B','C'};
-                return result;
-            case 4:
-                result = new char[]{'A','B','C'};
-                return result;
-            case 5:
-                result = new char[]{'A','B','C'};
-                return result;
-            case 6:
-                result = new char[]{'A','B','C'};
-                return result;
-            case 7:
-                result = new char[]{'A','B','C'};
-                return result;
-            case 8:
-                result = new char[]{'A','B','C'};
-                return result;
-            case 9:
-                result = new char[]{'A','B','C'};
-                return result;
-            default:
-                result = new char[]{};
-                return result;
+    static ArrayList<String> possibleWords(int a[], int N)
+    {
+        // your code here
+        String[] arr = {"","","ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"};
+        ArrayList<String> res = new ArrayList<String>();
+        getPossibleWords(a,N,0,"",arr,res);
+        return res;
+    }
+
+    static void getPossibleWords(int[] a,
+                                 int N,
+                                 int currNum,
+                                 String currString,
+                                 String[] arr,
+                                 ArrayList<String> res){
+        if(currNum>=N){
+            res.add(currString);
+            return;
+        }
+        int num = a[currNum];
+        String nums = arr[num];
+        for(int i=0;i<nums.length();i++){
+            getPossibleWords(a,N,currNum+1,currString+nums.charAt(i),arr,res);
         }
     }
 
     public static void main(String[] args) {
-        char[] ch = test(0);
-        System.out.println(ch);
+        int[] arr = {2,3,4};
+        ArrayList<String> res = possibleWords(arr,arr.length);
+        System.out.println(res);
     }
 }

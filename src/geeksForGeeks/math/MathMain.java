@@ -23,9 +23,16 @@ public class MathMain {
 
 //        IsPrime is = new IsPrime();
 //        is.isPrime(37);
-        ArrayList<String> result = new ArrayList();
-        String s = "cha";
-        System.out.println(s.substring(0,2));
-
+//        ArrayList<String> result = new ArrayList();
+//        String s = "cha";
+//        System.out.println(s.substring(0,2));
+//        System.out.println(ExactlyThree.exactly3Divisors(67));
+        //AllDivisors.printDivisors1(30);
+        boolean[] res = PrimeNumbersTill.primeNumbersTillN(23);
+        for(int i=1;i<res.length;i++){
+            if(res[i]){
+                System.out.println(i);
+            }
+        }
     }
 }

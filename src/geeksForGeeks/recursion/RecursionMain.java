@@ -16,7 +16,9 @@ public class RecursionMain {
 //        System.out.println(sum.sumOfDigits(13));
 //        CutRope cutRope = new CutRope();
 //        System.out.println(cutRope.cutRope(23,11,9,12));
-        //PrintSubSets.printSubSets("ABC");
+        PrintSubSets.printSubSets("ABC");
+//        String s = "C";
+//        System.out.println(s.substring(1));
         //System.out.println(InterwaevingString.interweavingStrings("algoexpert","your-dream-job","your-algodream-expertjob"));
         //TowerOfHanoi.towerOfHanoi(3,'A','B','C');
         //System.out.println(Josephus.josephus(5,3));
@@ -27,6 +29,10 @@ public class RecursionMain {
 //        for(String s:res){
 //            System.out.print(s+"-");
 //        }
+
+        //System.out.println(Power.getPower(2,2));
+//        SumOfDigits sum = new SumOfDigits();
+//        System.out.println(sum.sumOfDigits(13));
 
     }
 }

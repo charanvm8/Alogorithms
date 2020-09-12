@@ -6,6 +6,8 @@ public class Josephus {
         if(total==1){
             return 0;
         }
-        return (josephus(total-1,killAt)+killAt)%total;
+        else{
+            return (josephus(total-1,killAt)+killAt)%total;
+        }
     }
 }

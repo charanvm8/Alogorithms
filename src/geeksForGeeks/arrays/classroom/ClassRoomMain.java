@@ -24,8 +24,8 @@ public class ClassRoomMain {
 //        int[] arr= {5,-2,3,4};
 //        System.out.println(MaxCirSubArrSum.maxCirSubArrSum(arr));
 
-        int[] arr= {8,3,4,8,8};
-        System.out.println(MajorityElement.majorityElement(arr));
+//        int[] arr= {8,3,4,8,8};
+//        System.out.println(MajorityElement.majorityElement(arr));
 //
 //        int[] arr = {1,8,30,-5,20,7};
 //        System.out.println(WindowSliding.windowSliding(arr,3));
@@ -37,5 +37,6 @@ public class ClassRoomMain {
 //        for(k=0;k<100;k=k+2){
 //            System.out.println(k);
 //        }
+        System.out.println(-2>>2);
     }
 }
