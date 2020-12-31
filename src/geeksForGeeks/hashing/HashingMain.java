@@ -22,13 +22,12 @@ public class HashingMain {
 //        System.out.println(strs);
 //
 //
-//        Map<String,Integer> maps = new HashMap<>();
-//        maps.put("Charan",1);
-//        maps.put("Vardhan",2);
-//
-//        for(Map.Entry<String,Integer> e:maps.entrySet()){
-//            System.out.println(e.getKey()+" "+e.getValue());
-//        }
+        Map<String,Integer> maps = new HashMap<>();
+        maps.put("Charan",1);
+        maps.put("Vardhan",2);
+        for(Map.Entry<String,Integer> e:maps.entrySet()){
+            System.out.println(e.getKey()+" "+e.getValue());
+        }
 
 //        int[] arr = {43,6,-39,-8,-21,23,-29,-31,34,-13,48,-26,-35,20,-37,-24,41,30};
 //        System.out.println(SubarrayWithSum0.findsum(arr,arr.length));

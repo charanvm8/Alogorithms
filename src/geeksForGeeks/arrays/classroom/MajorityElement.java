@@ -36,4 +36,23 @@ public class MajorityElement {
         }
         return counter>1?index:-1;
     }
+
+    public static int majority(int[] arr,int len){
+        if(len==0){
+            return 0;
+        }
+        int currElement = arr[0];
+        int counter = 1;
+        for(int i=1;i<len;i++){
+
+            if(arr[i]!=currElement){
+                counter--;
+            }
+            if(counter==0){
+                currElement = arr[i];
+                counter=1;
+            }
+        }
+        return counter>=len/2?counter:-1;
+    }
 }

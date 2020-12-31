@@ -26,7 +26,7 @@ public class OpenAddressing {
             if(data[j]==i){
                 return true;
             }
-            i = (i+1)%capacity;
+            j = (i+1)%capacity;
             if(i==hash){
                 return false;
             }
