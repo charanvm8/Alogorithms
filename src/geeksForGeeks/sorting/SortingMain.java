@@ -6,6 +6,9 @@ import geeksForGeeks.sorting.classroom.SortArrayTwoWays;
 import geeksForGeeks.sorting.classroom.UnionOfArrays;
 import geeksForGeeks.sorting.theory.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class SortingMain {
 
     public static void main(String[] args) {
@@ -34,6 +37,11 @@ public class SortingMain {
         for(int i:arr){
             System.out.print(i+" ");
         }
+        System.out.println();
+        System.out.println(-3%2);
+        Map<Integer,Integer> s
+                = new HashMap<>();
+
 
 
     }

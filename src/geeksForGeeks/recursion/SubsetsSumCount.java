@@ -11,4 +11,9 @@ public class SubsetsSumCount {
                 countSubSetsSum(numbers,index-1,target);
 
     }
+
+    public static void main(String[] args) {
+        int[] arr={10,20,15};
+        System.out.println(countSubSetsSum(arr,arr.length,0));
+    }
 }

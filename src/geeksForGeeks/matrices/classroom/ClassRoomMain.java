@@ -1,5 +1,8 @@
 package geeksForGeeks.matrices.classroom;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ClassRoomMain {
 
     public static void printMatrix(int[][] arr){
@@ -21,7 +24,10 @@ public class ClassRoomMain {
 
         //MatrixInSnakePattern.printMatrixInSnakePattern(arr);
         //BoundaryTraversal.printBoundaries(arr);
-        TransposeOfMatrix.matrixTranspose(arr1);
-        printMatrix(arr1);
+        TransposeOfMatrix.matrixTranspose(arr);
+        ReverseColumns.reverseColumns(arr);
+        printMatrix(arr);
+        Set<Integer> ne = new HashSet<>();
+        ne.
     }
 }
