@@ -28,6 +28,6 @@ public class ClassRoomMain {
         ReverseColumns.reverseColumns(arr);
         printMatrix(arr);
         Set<Integer> ne = new HashSet<>();
-        ne.
+        //ne.
     }
 }

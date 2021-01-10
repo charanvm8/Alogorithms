@@ -3,23 +3,20 @@ package search;
 public class BinarySearchIterative {
 
     public static int binarySearchIterative(int[] arr,int start,int end,int value){
-
-        int insideStart = start;
-        int insideEnd = end;
-
-        while(insideEnd>=insideStart){
-            int mid = (insideEnd+insideStart)/2;
+        while (start<=end){
+            int mid = start+((end-start)/2);
             if(arr[mid]==value){
                 return mid;
             }
-            if(value>arr[mid]){
-                insideStart = mid+1;
+            if(arr[mid]>value){
+                end = mid-1;
             }
             else{
-                insideEnd = mid-1;
+                start = mid+1;
             }
         }
         return -1;
+
     }
 
     public static void main(String[] args) {

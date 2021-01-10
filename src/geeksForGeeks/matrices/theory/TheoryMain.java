@@ -1,5 +1,7 @@
 package geeksForGeeks.matrices.theory;
 
+import java.util.*;
+
 public class TheoryMain {
 
     public static void printMatrix(int[][] arr){
@@ -45,6 +47,15 @@ public class TheoryMain {
         System.out.println("Support "+ ((total*0.4)-1000) );
         System.out.println("Prakash "+ res/2);
         System.out.println("Charan  "+ res/2);
+        LinkedList<Integer> res1 = new LinkedList<>();
 
+        String s= "SAM_IAE Haiti Earthquake Report 2020-12-24 10.00.42.xlsx";
+        s.replaceAll("[-]","/");
+        s.replaceAll(".",":");
+        System.out.println(s);
+
+        Map<String,String> z = new HashMap<>();
+        z.put("Charan","Kiran");
+        System.out.println(z.containsKey("Charan"));
     }
 }

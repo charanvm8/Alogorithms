@@ -11,15 +11,15 @@ public class BinarySearchRecursive {
             if(value>arr[mid]){
                 return binarySearch(arr,mid+1,end,value);
             }
-            return binarySearch(arr,0,mid-1,value);
+            return binarySearch(arr,start,mid-1,value);
         }
         return -1;
     }
 
     public static void main(String[] args) {
 
-        int[] arr = {20};
+        int[] arr = {20,10,30,43,3352,343,35334,34,3435,3,533,5323,2,43};
         int end = arr.length;
-        System.out.println(binarySearch(arr,0,end,10));
+        System.out.println(binarySearch(arr,0,end,3));
     }
 }
