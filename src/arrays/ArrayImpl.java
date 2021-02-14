@@ -1,6 +1,12 @@
 package arrays;
 
+import com.sun.tools.javac.util.ArrayUtils;
 import utility.PrintArray;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ArrayImpl {
 
@@ -128,7 +134,14 @@ public class ArrayImpl {
     }
 
 
-
+    public static void prefixSum(int[] arr){
+        int[] sum = new int[arr.length];
+        sum[0] = arr[0];
+        for(int i=1;i<arr.length;i++){
+            sum[i] = sum[i-1]+arr[i];
+        }
+        PrintArray.printArray(sum);
+    }
 
 
     public static void main(String[] args) {
@@ -142,6 +155,25 @@ public class ArrayImpl {
 //        PrintArray.printArray(arr1);
 //        printFrequencies(arr2);
         int[] arr3 = {1,2,3};
-        System.out.println(trapWater1(arr3,arr3.length));
+        //System.out.println(trapWater1(arr3,arr3.length));
+        prefixSum(arr3);
+        Map<Character,Integer> map = new HashMap<>();
+        map.put('a',2);
+        map.put('b',1);
+        String s = "ab";
+        Character[] array = new Character[s.length()];
+        for (int i = 0; i < s.length() ; i++) {
+          /*
+          Character(char) is deprecated since Java SE 9 & JDK 9
+          Link: https://docs.oracle.com/javase/9/docs/api/java/lang/Character.html
+          array[i] = new Character(s.charAt(i));
+          */
+            array[i] = s.charAt(i);
+        }
+        //Arrays.sort(array, Comparator.comparingInt(map::get).reversed().thenComparing());
+        System.out.println(String.valueOf(array));
+        System.out.println('a'-'b');
+
+        System.out.println(5%5);
     }
 }

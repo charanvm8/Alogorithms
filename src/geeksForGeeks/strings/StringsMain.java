@@ -8,18 +8,14 @@ import geeksForGeeks.strings.problems.RemoveCommon;
 import geeksForGeeks.strings.problems.ReverseWords;
 import geeksForGeeks.strings.problems.SumNumbers;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class StringsMain {
 
     public static void main(String[] args) {
-        //System.out.println(CheckForAnagram.checkIfAnagram("abaac","aacba"));
-        //System.out.println(LeftMostRepeatingCharacterIndex.leftMostRepeating2("acdqeeb"));
-        //NaivePatternSearching.patternSearchNaive("ABCABCD","ABCD");
 
-       // System.out.println(SumNumbers.findSum("1abc23"));
-//        System.out.println((int)'Z');
-//        System.out.println(ReverseWords.reverseWords("Hi"));
-        //System.out.println((char)65);
-        //System.out.println(RemoveCommon.concatenatedString("aacdb","gafd"));
-        System.out.println(LeftMostNonRepeating.leftMostNonRepeating("hello"));
     }
 }

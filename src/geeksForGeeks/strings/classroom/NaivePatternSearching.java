@@ -3,17 +3,25 @@ package geeksForGeeks.strings.classroom;
 public class NaivePatternSearching {
 
     public static void patternSearchNaive(String str,String s){
-        for(int i=0;i<=str.length()-s.length();i++){
-            boolean isSubString = true;
-            for(int j=0;j<s.length();j++){
-                if(str.charAt(j+i)!=s.charAt(j)){
-                    isSubString = false;
+        int strLen = str.length();
+        int patternLen = s.length();
+        for(int i=0;i<=strLen-patternLen;i++){
+            boolean isPattern = true;
+            for(int j=0;j<patternLen;j++){
+                if(str.charAt(i+j)!=s.charAt(j)){
+                    isPattern = false;
                     break;
                 }
             }
-            if(isSubString){
+            if(isPattern){
                 System.out.println(i);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        String txt = "AABAACAADAABAAABAA";
+        String pat = "AABA";
+        patternSearchNaive(txt, pat);
     }
 }

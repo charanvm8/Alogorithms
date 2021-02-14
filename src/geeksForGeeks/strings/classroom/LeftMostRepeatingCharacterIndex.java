@@ -32,6 +32,20 @@ public class LeftMostRepeatingCharacterIndex {
         return -1;
     }
 
+    public static int leftMostNonRepeating(String s1){
+        int[] chars = new int[CHAR];
+        Arrays.fill(chars,-1);
+        int min = Integer.MIN_VALUE;
+        for(int i=0;i<s1.length();i++){
+            int currIndex = (int)s1.charAt(i);
+            if(chars[currIndex]!=0){
+                min = Math.min(min,chars[currIndex]);
+            }
+            chars[currIndex] = i;
+        }
+        return min!=Integer.MIN_VALUE?min:-1;
+    }
+
     //Single loop
     public static int leftMostRepeating1(String s1){
         int[] chars = new int[CHAR];

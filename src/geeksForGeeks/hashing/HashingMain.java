@@ -8,6 +8,21 @@ import java.util.*;
 
 public class HashingMain {
 
+
+    public static void nkOccurances(int[] arr,int k){
+        Map<Integer,Integer> countMap = new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            countMap.put(arr[i],countMap.getOrDefault(arr[i],0)+1);
+        }
+        int range = arr.length/k;
+        for(Integer key:countMap.keySet()){
+            if(countMap.get(key)>=range){
+                System.out.println(countMap.get(key));
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
 
 //        Set<String> strs = new HashSet<>();

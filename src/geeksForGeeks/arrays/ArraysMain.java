@@ -1,7 +1,6 @@
 package geeksForGeeks.arrays;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ArraysMain {
 
@@ -44,7 +43,16 @@ public class ArraysMain {
 //        int[] arr10 = {30,10,8,2};
 //        System.out.println(MaximumDiff.maxDiff(arr7));
 
-        int[] arr11 = {1,5,3,8,12};
-        System.out.println(BuySellStock1.buySellStock2(arr11,0,arr11.length-1));
-    }
+//        int[] arr11 = {1,5,3,8,12};
+//        System.out.println(BuySellStock1.buySellStock2(arr11,0,arr11.length-1));
+
+        String s = "asrea";
+
+        Set<String> ss = new HashSet<>();
+        ss.add("harsha");
+        ss.add("charan");
+        List<String> lst = Arrays.asList("charan","vardhan","dileep");
+        ss.removeAll(lst);
+        System.out.println(ss);
+     }
 }

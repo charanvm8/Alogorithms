@@ -2,6 +2,8 @@ package geeksForGeeks.sorting.theory;
 
 import utility.PrintArray;
 
+import java.util.Arrays;
+
 public class MergeSort {
 //    public static void mergeSort(int[] arr,int start,int end){
 //        if(start<end){
@@ -138,38 +140,143 @@ public class MergeSort {
         }
     }
 
-    public static void partitionNaive(int[] arr){
+    public static int partitionNaive(int[] arr,int index){
         int len = arr.length;
         int[] res = new int[len];
-        int start = 0;
-        int end = len-1;
-        int pivot = arr[len-1];
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]<=pivot){
-                res[start++] = arr[i];
+        int counter = 0;
+        int compareVal = arr[index];
+        for(int i=0;i<len;i++){
+            if(arr[i]<compareVal){
+                res[counter++] = arr[i];
+            }
+        }
+        int mid = counter;
+        for(int j=0;j<len;j++){
+            if(arr[j]>compareVal){
+                res[counter++] = arr[j];
+            }
+        }
+        res[len-1] = res[mid];
+        res[mid] = compareVal;
+        PrintArray.printArray(res);
+        return mid;
+    }
+
+    public static int countInversions(int[] arr,int start,int end){
+        int res = 0;
+        if(start>=end){
+            int mid = (start+end)/2;
+            res+=countInversions(arr,start,mid);
+            res+=countInversions(arr,mid+1,end);
+            res+=mergeInversions(arr,start,end);
+        }
+        return res;
+    }
+
+    public static int mergeInversions(int[] arr,int start,int end){
+        int mid = (start+end)/2;
+        int[] leftArr = new int[mid-start+1];
+        int[] rightArr = new int[end-mid];
+        for(int i=start;i<=mid;i++){
+            leftArr[i] = arr[i];
+        }
+        for(int i=mid+1;i<=end;i++){
+            rightArr[i] = arr[i];
+        }
+        int leftStart = 0;
+        int rightStart = 0;
+        int resCounter = 0;
+        int counter = 0;
+        while(leftStart<leftArr.length && rightStart<rightArr.length){
+            if(leftArr[leftStart]<=rightArr[rightStart]){
+                arr[resCounter++] = leftArr[leftStart++];
             }
             else{
-                res[end--] = arr[i];
+                arr[resCounter++] = rightArr[rightStart++];
+                counter+=leftArr.length-1-leftStart;
             }
         }
-        arr[start] = pivot;
-        PrintArray.printArray(res);
+        while (leftStart<leftArr.length){
+            arr[resCounter++] = leftArr[leftStart++];
+        }
+        while (rightStart<rightArr.length){
+            arr[resCounter++] = rightArr[rightStart++];
+        }
+        return counter;
     }
 
-    public static void lomutoPartition(int[] arr){
-        int last = arr.length-1;
-        int pivot = arr[last];
-        int start = 0;
-        for(int i=0;i<arr.length;i++){
+    public static int lomutoPartition(int[] arr,int currLow,int high){
+        int pivot = arr[high];
+        int currIndex = -1;
+        for(int i=currLow;i<=high-1;i++){
             if(arr[i]<=pivot){
+                currIndex++;
                 int temp = arr[i];
-                arr[i] = arr[start];
-                arr[start++] = temp;
+                arr[i] = arr[currIndex];
+                arr[currIndex] = temp;
             }
         }
-        PrintArray.printArray(arr);
-
+        currIndex++;
+        int temp = arr[currIndex];
+        arr[currIndex] = pivot;
+        arr[high] = temp;
+        return currIndex;
     }
+
+    public static int hoaresPartition(int[] arr,int left,int right){
+        int pivot = arr[0];
+        int leftTrack = left-1;
+        int rightTrack = right+1;
+        while (true){
+            do{
+                leftTrack++;
+            }
+            while (arr[leftTrack]<pivot);
+            do{
+                rightTrack--;
+            }
+            while (arr[rightTrack]>=pivot);
+            if(leftTrack==rightTrack){
+                return leftTrack;
+            }
+            int temp = arr[leftTrack];
+            arr[leftTrack] = arr[rightTrack];
+            arr[rightTrack] = temp;
+        }
+    }
+
+    public static int kthSmallest(int[] arr,int pos){
+//        Arrays.sort(arr);
+//        return arr[pos-1];
+        int low = 0, pivot = arr.length-1;
+        while (true){
+            int currPivotVal = arr[pivot];
+            int currLow = low-1;
+            for(int i=low;i<pivot-1;i++){
+                if(arr[i]<currPivotVal){
+                    currLow++;
+                    int temp = arr[i];
+                    arr[i] = arr[currLow];
+                    arr[currLow] = temp;
+                }
+            }
+
+            int temp = arr[pivot];
+            arr[pivot] = arr[currLow+1];
+            arr[currLow+1] = temp;
+            if(currLow+1==pos-1){
+                return arr[currLow+1];
+            }
+            if(currLow+1>=pos-1){
+                pivot = currLow;
+            }
+            else{
+                low = currLow+1;
+            }
+        }
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -180,7 +287,12 @@ public class MergeSort {
 //        int[] arr = {10,15,20,11,30};
 //        sortWithIndexes(arr,0,2,4);
 
-        int[] arr = {3,8,6,12,10,7};
-        lomutoPartition(arr);
+//        int[] arr = {7,3,8,6,12,10};
+//        System.out.println(hoaresPartition(arr,0,arr.length-1));
+
+//        int[] arr1 = {3,8,6,12,10,7};
+//        System.out.println(partitionNaive(arr1,5));
+        int[] arr = {10,5,30,12};
+        System.out.println(kthSmallest(arr,2));
     }
 }
