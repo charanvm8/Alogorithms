@@ -1,8 +1,6 @@
 package educative.topKElements;
 
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.*;
 
 public class TopKElements {

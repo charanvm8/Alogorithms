@@ -1,6 +1,7 @@
 package practice;
 
-import java.util.ArrayDeque;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Test {
 
@@ -129,6 +130,14 @@ public class Test {
         s.push("Test");
         s.push("Test1");
         System.out.println();
+
+        List<Integer> arr = new ArrayList<>();
+        Collections.sort(arr);
+        Collections.sort(arr, Collections.reverseOrder());
+
+        List<Integer> sortedList = arr.stream().sorted().collect(Collectors.toList());
+        List<Integer> sortedListRev = arr.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+
     }
 
 }
