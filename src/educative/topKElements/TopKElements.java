@@ -118,4 +118,8 @@ public class TopKElements {
     }
 
 
+    public static void testMethod(int variable) {
+        
+    }
+
 }
